@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Layout</title>
+    <style>
+        /* Resetting default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Container for entire layout */
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* this applies for header and footer elements in container div only */
+            min-height: 100vh;
+            /* Ensure full viewport height */
+        }
+
+        /* Header */
+        header {
+            background-color: #626161;
+            /* Green */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #626161;
+            /* Dark Gray */
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Main content area */
+        .main-content {
+            flex: 1;
+            /* Fill remaining space */
+            display: flex;
+            justify-content: space-between;
+            background-color: #f2f2f2;
+            /* Light Gray */
+
+        }
+
+        /* Left panel */
+        .left-panel {
+            width: 100px;
+            background-color: #2196F3;
+            /* Blue */
+            color: white;
+            padding: 10px;
+        }
+
+        /* Right panel */
+        .right-panel {
+            width: 200px;
+            background-color: #c0643a;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Content area */
+        .content {
+            width: 800px;
+            background-color: rgb(219, 203, 203);
+            /* Dark Gray */
+            color: black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        ul {
+            /* flex: 0 1 auto; default values */
+            /* flex: flex-grow flex-shrink flex-basis; */
+            display: flex;
+            flex: 0 1 auto;
+            border: 1px solid red;
+            padding: 0;
+            list-style: none;
+            background-color: #e8e8e9;
+        }
+
+        li {
+            background-color: #8cacea;
+            margin: 8px;
+            min-height: 100px;
+            color: #fff;
+            padding: 4px;
+        }
+
+        li:nth-child(1) {
+            margin-right: auto;
+            /*applied only to the right*/
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h2>Header</h2>
+        </header>
+
+        <div class="main-content">
+            <div class="left-panel">
+                <h2>Left Panel</h2>
+            </div>
+
+            <div class="content">
+                <h2>Page Content</h2>
+                <p>This is the main content of the page.</p>
+                <ul>
+                    <li>Home</li>
+                    <li>I am a simple list</li>
+                    <li>I am a simple list</li>
+                    <li>I am a simple list</li>
+                </ul>
+            </div>
+
+            <div class="right-panel">
+                <h2>Right Panel</h2>
+            </div>
+        </div>
+
+        <footer>
+            <p>Footer</p>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title> Relative Positioning </title>
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            margin: 0;
+            background-color: black;
+        }
+
+        .green-box,
+        .blue-box {
+            height: 100vh;
+            flex: 1 1 0;
+        }
+
+        .green-box {
+            background-color: #16a085;
+        }
+
+        .blue-box {
+            background-color: #8cacea;
+            position: relative;
+            top: 50px;
+            left: 70px;
+        }
+
+        .child {
+            background-color: #fff;
+            width: 100px;
+            height: 100px;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="green-box"></div>
+    <div class="blue-box">
+        <div class="child"></div>
+        <div>
+</body>
+
+</html>
