@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page Layout</title>
+<style>
+    /* Resetting default margin and padding */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Container for entire layout */
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Ensure full viewport height */
+    }
+
+    /* Header */
+    header {
+        background-color: #4CAF50; /* Green */
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Footer */
+    footer {
+        background-color: #333; /* Dark Gray */
+        color: white;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* Main content area */
+    .main-content {
+        flex: 1; /* Fill remaining space */
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        background-color: #f2f2f2; /* Light Gray */
+
+    }
+
+    /* Left panel */
+    .left-panel {
+        /* width: 200px; */
+        background-color: #2196F3; /* Blue */
+        color: white;
+        padding: 10px;
+    }
+
+    /* Right panel */
+    .right-panel {
+        /* width: 200px; */
+        background-color: #f44336; /* Red */
+        color: white;
+        padding: 10px;
+    }
+
+    /* Content area */
+    .content {
+        /* width: 600px; */
+        background-color: #555; /* Dark Gray */
+        color: white;
+        padding: 20px;
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Header</h1>
+    </header>
+    
+    <div class="main-content">
+        <div class="left-panel">
+            <h2>Left Panel</h2>
+        </div>
+        
+        <div class="content">
+            <h2>Page Content</h2>
+            <p>This is the main content of the page.</p>
+        </div>
+        
+        <div class="right-panel">
+            <h2>Right Panel</h2>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Footer</p>
+    </footer>
+</div>
+
+</body>
+</html>
