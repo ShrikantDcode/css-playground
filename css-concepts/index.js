@@ -52,13 +52,44 @@ async function examplePromiseRace() {
 
 //console.log('Starting Promise.race...');
 //examplePromiseRace();
-for(i=0; i<5; i++){
-    setTimeout(() => console.log(i), 1000); //55555
-}
-for(let i=0; i<5; i++){
-    setTimeout(() => console.log(i), 1000); //01234
-}
+// for(i=0; i<5; i++){
+//     setTimeout(() => console.log(i), 1000); //55555
+// }
+// for(let i=0; i<5; i++){
+//     setTimeout(() => console.log(i), 1000); //01234
+// }
 
 // let b = {'key': 123};// , {'key': 256}};
 // let a = {{{'key': 123}}, {{'key': 256}}};
 // console.log(a[b]);
+
+// for (var i = 0; i < 5; i++) {
+//   console.log(i);
+// }
+
+for (var i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 0);
+}
+// output: 55555
+
+for (var i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 10000);
+}
+//output: 55555
+
+for (let i = 0; i < 5; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 10000);
+}
+//output: 01234
+//0
+//1
+//2
+//3
+//4
+//Note: each number will be logged in next line for every loop
